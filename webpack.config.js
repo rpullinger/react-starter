@@ -1,4 +1,8 @@
-module.exports = {
+'use strict';
+
+const isProd = (process.env.NODE_ENV === 'production');
+
+let config = {
     entry: './app/main.js',
     output: {
         path: './build',
@@ -18,3 +22,10 @@ module.exports = {
         extensions: ['', '.js', '.json']
     }
 };
+
+// Remove hot reload for prod and testing
+if (isProd) {
+    config.module.loaders[0].query.presets = ['es2015', 'react'];
+}
+
+module.exports = config;

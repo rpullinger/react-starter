@@ -5,7 +5,7 @@ import Test from './test';
 
 ReactDOM.render(
     <div>
-        <Hello name="rich" />
+        <Hello name="richard" />
         <Test />
     </div>,
     document.getElementById('root')
