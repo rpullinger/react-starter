@@ -20,6 +20,9 @@ let config = {
     },
     resolve: {
         extensions: ['', '.js', '.json']
+    },
+    devServer: {
+        historyApiFallback: true
     }
 };
 
