@@ -12,7 +12,7 @@ const routes = {
         { path: 'page1', component: Page1 },
         { path: 'page2', component: Page2 },
         { path: 'page3', component: Page3 },
-        { path: '*', compoent: FourZeroFour }
+        { path: '*', component: FourZeroFour }
     ]
 }
 

@@ -15,6 +15,7 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 history.listen((location) => {
     console.log(location.pathname);
+    console.log(store.getState());
 });
 
 ReactDOM.render(
