@@ -15,12 +15,14 @@
     "predev:server": "npm run build:static",
     "build:static": "cp -r public/* build/",
     "watch:static": "chokidar 'public/**/*' -c 'npm run build:static'",
+    "storybook": "start-storybook -p 9001",
     "prewatch": "npm run clean",
-    "watch": "parallelshell 'npm run dev:server' 'npm run watch:static' 'npm run watch:test' 'npm run watch:css'",
+    "watch": "parallelshell 'npm run dev:server' 'npm run watch:static' 'npm run watch:test' 'npm run watch:css' 'npm run storybook'",
     "prebuild": "npm run clean",
     "build": "parallelshell 'npm run build:static' 'npm run build:js' 'npm run build:css'"
   },
   "devDependencies": {
+    "@kadira/storybook": "^1.5.0",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
@@ -43,6 +45,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "raw-loader": "^0.5.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-redux": "^4.4.1",
@@ -50,6 +53,7 @@
     "react-router-redux": "^4.0.1",
     "redux": "^3.3.1",
     "redux-devtools": "^3.2.0",
-    "redux-responsive": "^1.1.0"
+    "redux-responsive": "^1.1.0",
+    "style-loader": "^0.13.1"
   }
 }
