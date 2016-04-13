@@ -9,8 +9,6 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import React from 'react';
 
-describe('<{{ properCase name }} />', () => {
-    it('should be an object', () => {
-        expect(shallow(<{{ properCase name }} />)).to.be.an('object');
-    });
+describe('<{{ properCase name }} /> container', () => {
+
 });

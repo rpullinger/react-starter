@@ -1,0 +1,22 @@
+/**
+*
+* {{ properCase name }}
+*
+*/
+import React from 'react';
+import { connect } from 'react-redux';
+import {{ properCase component}} from '../components/{{ properCase component}}';
+
+function mapStateToProps(state) {
+    return {
+        state: state,
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        exampleAction: (param) => { dispatch({}); },
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)({{ properCase component}});
