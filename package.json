@@ -3,7 +3,7 @@
     "preclean": "mkdir -p build",
     "clean": "rm -r build",
     "postclean": "npm run preclean",
-    "test": "NODE_ENV=production mocha-webpack --webpack-config webpack.config.js 'app/**/*.test.js' --colors --reporter list",
+    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.config.js 'app/**/*.test.js' --colors --reporter list",
     "watch:test": "npm run test -- --watch",
     "build:css": "postcss -c postcss.config.js",
     "postbuild:css": "npm run minify:css",

@@ -13,9 +13,6 @@ let config = {
             test: /\.js$/,
             exclude: /(node_modules)/,
             loader: 'babel-loader',
-            query: {
-                presets: ['es2015', 'react', 'react-hmre']
-            }
         }]
     },
     resolve: {
@@ -25,10 +22,5 @@ let config = {
         historyApiFallback: true
     }
 };
-
-// Remove hot reload for prod and testing
-if (isProd) {
-    config.module.loaders[0].query.presets = ['es2015', 'react'];
-}
 
 module.exports = config;
