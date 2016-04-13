@@ -18,6 +18,9 @@ git commit
 ## To build
 `npm run build`
 
+## For code coverage
+`npm run coverage`
+
 ## Includes
 * React
 * Redux
