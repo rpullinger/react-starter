@@ -1,0 +1,10 @@
+import constants from '../constants/{{ camelCase name }}';
+
+export default function (state = true, action){
+    switch (action.type){
+        case constants.DEFAULT_ACTION:
+            return state;
+        default:
+            return state;
+    }
+}

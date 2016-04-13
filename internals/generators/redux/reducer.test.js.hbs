@@ -1,0 +1,19 @@
+import { expect } from 'chai';
+import constants from '../constants/{{ camelCase name }}';
+import reducer from './{{ camelCase name }}';
+
+describe('{{ sentenceCase name }} reducer', () => {
+
+    it('should set a initial state', () => {
+        expect(reducer(undefined, {})).to.equal(true);
+    });
+
+    it('should handle actions', () => {
+
+        const action = {
+            type: constants.TURN_OFF
+        };
+
+        expect(reducer(false, action)).to.equal(false);
+    });
+});

@@ -1,0 +1,14 @@
+import { expect } from 'chai';
+import constants from '../constants/{{ camelCase name }}';
+import * as actions from './{{ camelCase name }}';
+
+describe('{{ sentenceCase name }} actions', () => {
+
+    it('should have a test action', () => {
+        const expectedAction = {
+            type: constants.DEFAULT_ACTION
+        }
+        expect(actions.action()).to.deep.equal(expectedAction);
+    });
+
+});
